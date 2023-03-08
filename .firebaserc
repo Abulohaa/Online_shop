@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fir-demo-11561": {
+      "hosting": {
+        "oshop": [
+          "fir-demo-11561"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fir-demo-11561"
+  }
+}

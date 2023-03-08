@@ -1,0 +1,33 @@
+@use "../../../styles.scss" as *;
+.navbar {
+  background-color: $dark !important;
+  .navbar-brand {
+    color: $green !important;
+  }
+  .nav-item {
+    transition: $mainTransision;
+    a {
+      color: white !important;
+      &:hover {
+        color: $green !important;
+      }
+    }
+    .active {
+      color: $green !important;
+      font-weight: bold;
+      border-bottom: 3px solid $green;
+    }
+    a.nav-link span {
+      background-color: $green !important ;
+    }
+  }
+  .dropdown-menu {
+    background-color: $dark !important;
+    a {
+      transition: $mainTransision;
+      &:hover {
+        background-color: rgba( #000 , 0.5) !important;
+      }
+    }
+  }
+}

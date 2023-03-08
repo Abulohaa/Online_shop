@@ -1,0 +1,39 @@
+@use "../../../styles.scss" as *;
+@use "./src/app/shared/shared-styles/button.scss" as *;
+
+.card {
+  min-height: 270px;
+  border: 2px solid rgba(25, 68, 82, 0.27);
+  box-shadow: rgb(120 120 120 / 45%) 20px 20px 20px -20px;
+  overflow: hidden;
+  // border-radius: 0px 0px 100px 100px/0px 0px 15px 15px !important;
+  transition: $mainTransision;
+  .img-container {
+    .card-img-top {
+      width: 100%;
+      border-radius: 0 !important;
+      transition: $mainTransision;
+      &:hover {
+        transform: scale(1.1)
+      }
+    }
+  }
+  .card-body {
+    padding: 1rem .75rem;
+    .card-title {
+      color: $green;
+      cursor: pointer;
+      transition: $mainTransision;
+      font-weight: 500 !important;
+      &:hover {
+        color: $dark;
+      }
+    }
+    .card-text {
+      font-weight: 500;
+      color: $dark;
+    }
+  }
+
+
+}

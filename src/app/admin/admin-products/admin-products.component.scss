@@ -1,0 +1,80 @@
+@use "../../../styles.scss" as *;
+@use "./src/app/shared/shared-styles/button.scss" as *;
+
+
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #fff;
+$gray: #9b9b9b;
+.form__group {
+  position: relative;
+  padding: 10px 0 0;
+  // margin-top: 10px;
+  // width: 50%;
+}
+a {
+  text-decoration: none;
+}
+.form__field {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: 1.0rem;
+  color: #000;
+  padding: 4px 0;
+  background: transparent;
+  transition: border-color $mainTransision;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.0rem;
+    cursor: text;
+    top: 15px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: $mainTransision;
+  font-size: 0.75rem;
+  color: $gray;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: $mainTransision;
+    font-size: 0.75rem;
+    color: $dark;
+    // font-weight:700;
+  }
+  // font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $dark 10%, $green 35%);
+  border-image-slice: 10;
+}
+table {
+  // background-color: rgba($color: $dark, $alpha: 0.65 );
+  th, td {
+    color: $green;
+    // text-align: center;
+  }
+  a {
+    color: $green;
+    transition: $mainTransision;
+    &:hover {
+      color: rgba($color: $green, $alpha: 0.8 );
+    }
+  }
+}
+mat-paginator {
+  background-color: rgb(245 245 245) !important;
+}

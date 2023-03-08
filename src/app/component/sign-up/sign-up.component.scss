@@ -1,0 +1,36 @@
+@use "../../shared/shared-styles/button.scss" as *;
+
+.row {
+  height: calc(100vh - 120px);
+  color: white;
+  box-shadow: 20px 0px 20px 0px rgb(0 0 0 / 10%);
+
+  .glass-background {
+    background-image: linear-gradient(to right top, #24252a, #2e3441, #334659, #335872, #2c6c8a, #257594, #1a7f9e, #0088a8, #0088a8, #0088a8, #0088a8, #0088a8);
+    box-shadow: 20px 0px 20px 0px rgb(0 0 0 / 10%);
+    backdrop-filter: blur(10.7px);
+    -webkit-backdrop-filter: blur(10.7px);
+  }
+
+  .col-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    &:nth-child(2) {
+      background-size: cover;
+      background: url("../../../material/images/login-background.jpeg") right center;
+    }
+
+    .right-center {
+      gap: 4rem;
+      width: 100%;
+      height: 100%;
+      color: #24252a;
+
+      h1 {
+        font-size: 2.5rem;
+        line-height: 1.3;
+      }
+    }
+  }
+}

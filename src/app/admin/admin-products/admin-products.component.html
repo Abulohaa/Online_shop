@@ -1,0 +1,45 @@
+<div class="d-flex justify-content-evenly align-items-center mb-3 py-1">
+  <a routerLink="/admin/products/new" class="shine-button px-4 rounded">New Product</a>
+
+  <div class="form__group">
+    <input type="input" (keyup)="applyFilter($event)" class="form__field" placeholder="Filter" name="filter"
+      id='filter' />
+    <label for="name" class="form__label">Filter</label>
+  </div>
+
+</div>
+
+
+<div class="rounded overflow-hidden mat-elevation-z8">
+
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="title">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> Title </th>
+      <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="price">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef> Price </th>
+      <td mat-cell *matCellDef="let element"> {{element.price | currency: "USD": true}} </td>
+    </ng-container>
+
+    <!-- Edit Column -->
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell mat-sort-header *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element"><a [routerLink]="['/admin/products/', element.key]"
+          class="text-decoration-none">Edit</a>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+</div>

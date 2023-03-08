@@ -1,0 +1,18 @@
+@use "../../../styles.scss" as *;
+div {
+  .col-2.center {
+    color: $green;
+    cursor: pointer;
+    transition: $mainTransision;
+    &:hover {
+      color: rgba($color: $green, $alpha: 0.7);
+    }
+  }
+  .col.center {
+    color: $dark;
+    transition: $mainTransision;
+    &:hover {
+      color: rgba($color: $dark, $alpha: 0.9);
+    }
+  }
+}

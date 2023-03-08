@@ -1,1 +1,24 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
 /* You can add global styles to this file, and also import other style files */
+/* Main Colors */
+$dark: #24252a;
+$green: #0088a8;
+$gray: #ececec;
+
+/* Secondry Colors */
+$dark-gray: #1a1a1a;
+$dark-green: #26362e;
+
+/* Main Transistion */
+$mainTransision: 0.3s;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; box-sizing: border-box;}
+
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}

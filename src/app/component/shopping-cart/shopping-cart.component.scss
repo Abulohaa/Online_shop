@@ -1,0 +1,9 @@
+@use "../../../styles.scss" as *;
+@use "./src/app/shared/shared-styles/button.scss" as *;
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-size: cover;
+}

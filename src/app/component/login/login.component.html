@@ -1,0 +1,67 @@
+<div class="row my-4">
+  <div class="col-6 background py-3 d-flex rounded-start">
+    <div class="d-flex flex-column justify-content-center gap-4 align-items-center">
+      <h1>Get exclusive access to our Store!</h1>
+      <p>
+        Looking for great deals on top-quality products? Look no further than our online store!
+        Our wide selection of products and unbeatable prices make us the go-to destination for savvy shoppers. home
+        goods to beauty products, we've got everything you need and more.
+        Shop with us today and experience the convenience and affordability of online shopping!
+      </p>
+    </div>
+    <svg id="wave" class="position-absolute bottom-0 start-0" style="transform:rotate(0deg); transition: 0.3s"
+      viewBox="0 0 1440 490" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+          <stop stop-color="rgba(255, 255, 255, 1)" offset="0%"></stop>
+          <stop stop-color="rgba(255, 255, 255, 1)" offset="100%"></stop>
+        </linearGradient>
+      </defs>
+      <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)"
+        d="M0,441L40,392C80,343,160,245,240,220.5C320,196,400,245,480,277.7C560,310,640,327,720,302.2C800,278,880,212,960,204.2C1040,196,1120,245,1200,277.7C1280,310,1360,327,1440,326.7C1520,327,1600,310,1680,261.3C1760,212,1840,131,1920,138.8C2000,147,2080,245,2160,269.5C2240,294,2320,245,2400,212.3C2480,180,2560,163,2640,171.5C2720,180,2800,212,2880,236.8C2960,261,3040,278,3120,261.3C3200,245,3280,196,3360,204.2C3440,
+          212,3520,278,3600,294C3680,310,3760,278,3840,277.7C3920,278,4000,310,4080,343C4160,376,4240,408,4320,416.5C4400,425,4480,408,4560,367.5C4640,327,4720,261,4800,236.8C4880,212,4960,229,5040,228.7C5120,229,5200,212,5280,196C5360,180,5440,163,5520,204.2C5600,245,5680,343,5720,392L5760,441L5760,490L5720,490C5680,490,5600,490,5520,490C5440,490,5360,490,5280,490C5200,490,5120,490,5040,490C4960,490,4880,490,4800,490C4720,490,4640,490,4560,490C4480,490,4400,490,4320,490C4240,490,4160,490,4080,490C4000,490,3920,490
+          ,3840,490C3760,490,3680,490,3600,490C3520,490,3440,490,3360,490C3280,490,3200,490,3120,490C3040,490,2960,490,2880,490C2800,490,2720,490,2640,490C2560,490,2480,490,2400,490C2320,490,2240,490,2160,490C2080,490,2000,490,1920,490C1840,490,1760,490,1680,490C1600,490,1520,490,1440,490C1360,490,1280,490,1200,490C1120,490,1040,490,960,490C880,490,800,490,720,490C640,490,560,490,480,490C400,490,320,490,240,490C160,490,80,490,40,490L0,490Z">
+      </path>
+    </svg>
+  </div>
+  <div class="col-6 py-3 rounded-end">
+    <div class="d-flex flex-column justify-content-center align-items-center right-center">
+      <form [formGroup]="form" (ngSubmit)="loginWithPassword()" class="w-75">
+        <div class="d-flex flex-column justify-content-around gap-4">
+          <div class="d-flex justify-content-center gap-3 align-items-center">
+            <span>Don't have an account? </span>
+            <button class="my-button rounded-pill my-secondry-button" type="button" routerLink="/sign-up">Sign
+              Up</button>
+            <!-- <span>New to our Shop? <a routerLink="sign-up">Sign Up!</a></span> -->
+          </div>
+          <div class="d-flex flex-column justify-content-center gap-3 ">
+            <mat-form-field>
+              <input matInput placeholder="Email" formControlName="email">
+              <mat-error *ngIf="form.get('email')?.errors?.['required']">
+                Email is required..
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="Password" formControlName="password" type="password">
+              <mat-error *ngIf="form.get('password')?.errors?.['required']">
+                Password is required..
+              </mat-error>
+            </mat-form-field>
+
+          </div>
+          <div class="d-flex justify-content-center">
+            <button class="my-button rounded-pill my-secondry-button mt-0" type="submit">Login</button>
+          </div>
+          <div class="line">
+
+          </div>
+          <div class="shadow mt-3 mx-auto" (click)="login()">
+            <i class="fa-brands fs-2 fa-google"></i>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>

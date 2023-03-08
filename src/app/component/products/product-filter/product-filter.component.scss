@@ -1,0 +1,15 @@
+@use "../../../../styles.scss" as *;
+
+.sticky-top {
+  top: 1px;
+  z-index: 1;
+  .list-group-item {
+    transition: $mainTransision;
+  }
+  .active,
+  .list-group-item:hover {
+    background-color: $dark;
+    color: $green;
+    font-weight: 500;
+  }
+}
